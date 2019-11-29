@@ -1,2 +1,7 @@
-// some Changes made here
-// some more changes
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Whaaaat Gopheeer?")
+}

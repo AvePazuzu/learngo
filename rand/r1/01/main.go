@@ -32,14 +32,16 @@ func main(){
 	rand.Seed(time.Now().UnixNano())
 
 	for i := 0; i <= turns; i++ {
-		if rand.Intn(luckyNum + 1) == luckyNum {
-			if i == 1 {
-				fmt.Println("🥇 FIRST TIME WINNER!!!")
-			} else {
-				fmt.Printf("🎉  %s \n", bonMes)
-			}
-			return
+		if rand.Intn(luckyNum + 1) != luckyNum {
+			continue
 		}	
+		if i == 1 {
+			fmt.Println("🥇 FIRST TIME WINNER!!!")
+		} else {
+			fmt.Printf("🎉  %s \n", bonMes)
+			}
+		return
+			
 	}
 	fmt.Println(losMes)
 }

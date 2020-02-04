@@ -44,6 +44,7 @@ func main() {
 
 	for i := 0; i <= turns; i++ {
 		k := rand.Intn(maxNum + 1)
+		fmt.Printf("%v ", k)
 		if k != luckyNum && k != luckyNum1 {
 			continue
 		}

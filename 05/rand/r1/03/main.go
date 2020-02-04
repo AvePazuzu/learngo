@@ -53,7 +53,7 @@ func main() {
 		} else {
 			fmt.Printf("🎉  %s %v \n", bonMes1, k)
 		}
-		return
+		break
 
 	}
 

@@ -22,7 +22,7 @@ func main() {
 		{"Bad", "Sad"},
 		{"Happy", "Glad"},
 	}
-	// varialbles are always initialized with 0 if not explicitely initialized with literal
+	// varialbles are always initialized with 0 if not explicitly initialized with literal
 	// so case for i = 0 is not needed
 	var i int
 	switch {

@@ -22,16 +22,15 @@ func main() {
 		{"Bad", "Sad"},
 		{"Happy", "Glad"},
 	}
-
+	// varialbles are always initialized with 0 if not explicitely initialized with literal
+	// so case for i = 0 is not needed
 	var i int
 	switch {
 	case mood == "pos":
 		i = 1
-	case mood == "neg":
-		i = 0
-	default:
-		fmt.Println("give mood [pos | neg")
-		return
+		// default:
+		// 	fmt.Println("give mood [pos | neg")
+		// 	return
 	}
 
 	rand.Seed(time.Now().UnixNano())

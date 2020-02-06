@@ -12,12 +12,9 @@ func main() {
 			"Tesla",
 		}
 
-		books = [...]string{
+		books = [5]string{
 			"Kafka's Revenge",
 			"Stay Golden",
-			"",
-			"",
-			"",
 		}
 	)
 	fmt.Printf("%q\n", names)

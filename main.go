@@ -1,14 +1,19 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
-	"bufio"
+	"time"
 )
 
-func main()  {
+func main() {
 	reader := bufio.NewReader(os.Stdin)
-    fmt.Print("Enter text: ")
-    text, _ := reader.ReadString('\n')
-    fmt.Println(text)
+	fmt.Print("Enter text: ")
+	text, _ := reader.ReadString('\n')
+	fmt.Println(text)
+
+	t1 := time.Now()
+	t2 := time.Now()
+	elapsed := t2.Sub(t1)
 }

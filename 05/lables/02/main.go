@@ -3,22 +3,32 @@ package main
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 	"strings"
 )
 
-const corpus = "" + "lazy cat jumps again and again and again"
-
 func main() {
-	words := strings.Fields(corpus)
+
+	// Get and split the PATH environment variable
+
+	// SplitList function automatically finds the
+	// separator for the path env variable
+	words := filepath.SplitList(os.Getenv("PATH"))
+	fmt.Println(words)
+	fmt.Println(os.Getenv("PATH"))
+	// Alternative way, but above one is better:
+	// words := strings.Split(
+	// 	os.Getenv("PATH"),
+	// 	string(os.PathListSeparator))
+
 	query := os.Args[1:]
-	//fmt.Printf("%s %s \n", corpus, words)
-	
-	queries: 
-	for _, q := range query {		
+
+	for _, q := range query {
 		for i, w := range words {
-			if q == w {
+			q, w = strings.ToLower(q), strings.ToLower(w)
+
+			if strings.Contains(w, q) {
 				fmt.Printf("#%-2d: %q\n", i+1, w)
-				break queries 
 			}
 		}
 	}

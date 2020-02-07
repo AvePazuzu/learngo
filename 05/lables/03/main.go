@@ -39,8 +39,8 @@ toTest:
 	}
 	fmt.Println()
 	t2 := time.Now()
-	ellapsed := t2.Sub(t1)
+	elapsed := t2.Sub(t1)
 
-	fmt.Println(ellapsed)
+	fmt.Println(elapsed)
 
 }

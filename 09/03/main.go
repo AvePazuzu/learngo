@@ -27,7 +27,6 @@ func main() {
 		if v.IsDir() {
 			dirs = append(dirs, v.Name()...)
 			dirs = append(dirs, '/')
-
 			dirs = append(dirs, '\n')
 		}
 	}

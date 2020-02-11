@@ -33,9 +33,9 @@ toTest:
 		// for every successfull to int conversion a
 		// an empty slice of len n is created and filled
 		// with the values asscending to n
-		num := make([]int, n)
+		num := make([]uint32, n)
 		for i, v := range num {
-			v = i + 1
+			v = uint32(i + 1)
 			num[i] = v
 		}
 		// each element of slice is modulo checked

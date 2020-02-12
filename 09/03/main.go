@@ -9,7 +9,7 @@ import (
 func main() {
 	// Get dir from console
 	args := os.Args
-	if len(args) != 2 {
+	if len(args) < 2 {
 		fmt.Println("Please provide a dir!")
 		return
 	}
@@ -22,13 +22,22 @@ func main() {
 	}
 
 	var dirs []byte
+	for i := range args[1:] {
+		// dirs = append(dirs, '\n')
+		dirs = append(dirs, args[i+1]...)
+		dirs = append(dirs, '\n')
+		for _, v := range files {
+			if v.IsDir() {
 
-	for _, v := range files {
-		if v.IsDir() {
-			dirs = append(dirs, v.Name()...)
-			dirs = append(dirs, '/')
+				dirs = append(dirs, '	')
+				dirs = append(dirs, v.Name()...)
+				dirs = append(dirs, '/')
+				// dirs = append(dirs, '\n')
+			}
 			dirs = append(dirs, '\n')
 		}
+		dirs = append(dirs, '\n')
+
 	}
 
 	// '0644' is a Unix code for file permissions

@@ -4,13 +4,16 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	"strings"
 )
 
 func main() {
 	in := bufio.NewScanner(os.Stdin)
 
+	//rx := regexp.MustCompile()
+
 	for in.Scan() {
-		fmt.Println(strings.ToUpper(in.Text()))
+		fmt.Println(in.Text())
+
 	}
+
 }

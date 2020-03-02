@@ -27,6 +27,7 @@ func main() {
 		if _, ok := sum[dom]; !ok {
 			doms = append(doms, dom)
 		}
+
 		sum[dom] += count
 		total += count
 		// fmt.Printf("%-25s %d \n", vis, vis[dom])

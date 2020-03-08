@@ -25,6 +25,8 @@ func main() {
 		{item: item{3, "minecraft", 20}, genre: "sandbox"},
 	}
 
+	ids
+
 	fmt.Printf("\nInanc's game store has %d games.\n\n", len(games))
 
 	in := bufio.NewScanner(os.Stdin)

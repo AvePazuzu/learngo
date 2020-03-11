@@ -25,7 +25,6 @@ func main() {
 		{item: item{3, "minecraft", 20}, genre: "sandbox"},
 	}
 
-	ids
 
 	fmt.Printf("\nInanc's game store has %d games.\n\n", len(games))
 
@@ -33,6 +32,7 @@ func main() {
 	for {
 		fmt.Printf(`
 > list   : lists all the games
+> id	 : returns game of id
 > quit   : quits
 `)
 		if !in.Scan() {

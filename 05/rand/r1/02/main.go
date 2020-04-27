@@ -14,20 +14,13 @@ const (
 	losMes2 = `losMes3`
 	losMes  = `You lost! Try again!🍀`
 	turns   = 1
+)
 
-	import (
-		"fmt"
-		"math/rand"
-		"os"
-		"strconv"
-		"time"
-	)
-	
-	const (
-		bonMes = `This is a bonus message!🍀`
-		losMes = `You lost! Try again!🍀`
-		turns  = 5
-	)
+const (
+	bonMes = `This is a bonus message!🍀`
+	losMes = `You lost! Try again!🍀`
+	turns  = 5
+)
 	
 	func main() {
 	

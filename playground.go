@@ -7,14 +7,18 @@ import (
 func main() {
 	fmt.Println("Hello, playground")
 
-	a := [...]int{1, 2, 3}
+	type computer struct {
+		brand string
+	}
 
-	fmt.Println(a)
-	incrByPtr(&a)
-	fmt.Println(a)
+	var a, b *computer
 
-	a = incr(a)
-	fmt.Println("a: ", a)
+	fmt.Println(a == b)
+
+	a = &computer{"Apple"}
+	b = &computer{"Apple"}
+	fmt.Println(a == b)
+	fmt.Println(*a == *b, &a == &b)
 
 }
 

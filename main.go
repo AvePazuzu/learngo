@@ -1,27 +1,36 @@
 package main
 
 import (
-	// "bufio"
 	"fmt"
-	// "os"
-	// "time"
 )
 
-func incr(a int) int {
-	// a++
-	return a+ 1
+func main() {
+	fmt.Println("Hello, playground")
+
+	a := [...]int{1, 2, 3}
+
+	fmt.Println(a)
+	incrByPtr(&a)
+	fmt.Println(a)
+
+	a = incr(a)
+	fmt.Println("a: ", a)
+
 }
 
-func main() {
-	// reader := bufio.NewReader(os.Stdin)
-	// fmt.Print("Enter text: ")
-	// text, _ := reader.ReadString('\n')
-	// fmt.Println(text)
+func incrByPtr(a *[3]int) {
+	fmt.Printf("%p\n", a)
 
-	// t1 := time.Now()
-	// t2 := time.Now()
-	// elapsed := t2.Sub(t1)
-	num := 10
-	fmt.Println(incr(num))
+	for i := range a {
+		a[i]++
+	}
 
+}
+
+func incr(a [3]int) [3]int {
+	var b [3]int
+	for i := range a {
+		b[i] = a[i] + 1
+	}
+	return b
 }
